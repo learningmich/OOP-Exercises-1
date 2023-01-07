@@ -1,20 +1,19 @@
-import java.util.*;
-
-public class Main
+public class BicycleRegistration
 {
-	public static void main(String[] args)
-	{
-		System.out.println("Hello World!");
+	public static void main(String[] args){
+		Bicycle bike1,bike2;
+		String owner1, owner2;
 
-		Scanner input = new Scanner(System.in);
+		bike1 = new Bicycle();
+		bike1.setOwnerName("Becky G.");
 
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
+		bike2 = new Bicycle();
+		bike2.setOwnerName("Cardi B.");
 
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
+		owner1 = bike1.getOwnerName();
+		owner2 = bike2.getOwnerName();
 
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
+		System.out.println(owner1 + " owns a bicycle.");
+		System.out.println(owner2 + " also owns a bicycle.");
 	}
 }
