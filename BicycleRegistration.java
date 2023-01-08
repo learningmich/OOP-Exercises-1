@@ -1,20 +1,34 @@
-import java.util.*;
-
-public class Main
+public class BicycleRegistration
 {
-	public static void main(String[] args)
-	{
-		System.out.println("Hello World!");
+  public static void main(String[] args) {
+		Bicycle bike1,bike2,bike3,tagno1,tagno2;	
+		String owner1,owner2,owner3, Tagnum1,Tagnum2,Tagnum3;	
 
-		Scanner input = new Scanner(System.in);
+		bike1= new Bicycle();
+		bike1.setOwnerName("Kim Taehyung");
 
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
+		bike2= new Bicycle();
+		bike2.setOwnerName("Jennie");
 
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
+		owner1=bike1.getOwnerName();
+		owner2=bike2.getOwnerName();
 
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
+		tagno1= new Bicycle();
+		tagno1.setTagNo("2003-194R");
+
+		tagno2= new Bicycle();
+		tagno2.setTagNo("2004-186T");
+
+		Tagnum1=tagno1.getTagNo();
+		Tagnum2=tagno2.getTagNo();
+
+		bike3= new Bicycle("2003-199B","Niki");
+		owner3=bike3.getOwnerName();
+		Tagnum3=bike3.getId();
+
+
+		System.out.println("\t"+owner1+" owns a Bicycle with a tag number: "+Tagnum1);
+		System.out.println("\t"+owner2+" also owns a  Bicycle with a tag number: "+Tagnum2);
+		System.out.println("\nThis is the final output of LabExercise1.2\n\t"+owner3+" owns a Bicycle with a tag number: "+Tagnum3);
 	}
 }
